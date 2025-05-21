@@ -3,22 +3,19 @@
 int main()
 {
 
-    // main branch 01
-    float total_amount, discount_rate = .1;
-    double computed_amount;
+    // main branch 07
+    double withdraw_amount;
 
-    printf("Enter total purchase amount: ");
-    scanf("%f", &total_amount);
+    printf("Enter withdraw amount: ");
+    scanf("%lf", &withdraw_amount);
 
-    if (total_amount > 1000)
+    if (withdraw_amount < 500)
     {
-        computed_amount = (double)total_amount - (double)(discount_rate * total_amount);
-
-        printf("You've got your self a discount of %.2f \n you are paying:%.2lf \n", discount_rate, computed_amount);
+        printf("You have a 10 off withdraw charge \n");
     }
     else
     {
-        printf("To have a %.2f discount you must have a total above 1000. \n you are paying: %.2f\n", discount_rate, total_amount);
+        printf("you do not have a withdraw charge \n");
     }
 
     return 0;
