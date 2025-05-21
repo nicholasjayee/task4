@@ -3,19 +3,19 @@
 int main()
 {
 
-    // main branch 07
-    double withdraw_amount;
+    // main branch 09
+    int duration;
 
-    printf("Enter withdraw amount: ");
-    scanf("%lf", &withdraw_amount);
+    printf("Enter membership duration: ");
+    scanf("%d", &duration);
 
-    if (withdraw_amount < 500)
+    if (duration >= 4)
     {
-        printf("You have a 10 off withdraw charge \n");
+        printf("You qualify for a 10%% (0.1) discount \n");
     }
-    else
+    else if (duration <= 3)
     {
-        printf("you do not have a withdraw charge \n");
+        printf("You qualify for a 5%% (0.05) discount \n");
     }
 
     return 0;
