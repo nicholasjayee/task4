@@ -3,22 +3,26 @@
 int main()
 {
 
-    // main branch 01
-    float total_amount, discount_rate = .1;
-    double computed_amount;
+    // main branch 02
 
-    printf("Enter total purchase amount: ");
-    scanf("%f", &total_amount);
+    int employees_years;
+    float basic_salary;
+    double final_salary;
 
-    if (total_amount > 1000)
+    printf("Employee's years of service: ");
+    scanf("%d", &employees_years);
+
+    printf("Employee's basic salary: ");
+    scanf("%f", &basic_salary);
+
+    if (employees_years > 5)
     {
-        computed_amount = (double)total_amount - (double)(discount_rate * total_amount);
-
-        printf("You've got your self a discount of %.2f \n you are paying:%.2lf \n", discount_rate, computed_amount);
+        final_salary = (double)basic_salary + (double)basic_salary * .05;
+        printf("Employee has a bonus. Full amount: %.2lf\n", final_salary);
     }
     else
     {
-        printf("To have a %.2f discount you must have a total above 1000. \n you are paying: %.2f\n", discount_rate, total_amount);
+        printf("Employee does not qualify for a bonus \n");
     }
 
     return 0;
